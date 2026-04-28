@@ -48,11 +48,10 @@ if st.button("開始辨識"):
             # 3. 繪製結果 (注意：plot() 預設回傳 BGR 格式)
             res_plotted = results[0].plot()
             
-            # 4. 將 BGR 轉回 RGB 供 st.image 正常顯示
-            res_plotted_rgb = cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB)
+    
             
         with col2:
-            st.image(res_plotted_rgb, caption='偵測結果', use_container_width=True)
+            st.image(res_plotted, caption='偵測結果', use_container_width=True)
     
         # --- 顯示偵測到的物件資訊 ---
         with st.expander("查看偵測細節"):
